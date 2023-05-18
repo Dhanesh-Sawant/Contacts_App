@@ -34,8 +34,6 @@ class Contact{
   final String name;
   Contact({required this.name}): id = const Uuid().v4();
 
-
-
 }
 
 class ContactBook extends ValueNotifier<List<Contact>>
@@ -98,7 +96,7 @@ class MyHomePage extends StatelessWidget {
               return Dismissible(
                 onDismissed: (direction){
                   contacts.remove(contact);
-                  //ContactBood().remove(contact: contact);
+                  //ContactBook().remove(contact: contact);
                 },
                 key: ValueKey(contact.id),
                 child: Material(
